@@ -1,12 +1,12 @@
-package bootstrap;
+package guru.springframework.spring5webapp.bootstrap;
 
 
-import domain.Author;
-import domain.Book;
+import guru.springframework.spring5webapp.domain.Author;
+import guru.springframework.spring5webapp.domain.Book;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import repositories.AutherRepository;
-import repositories.BookRepository;
+import guru.springframework.spring5webapp.repositories.AutherRepository;
+import guru.springframework.spring5webapp.repositories.BookRepository;
 
 @Component
 public class BootStrapData implements CommandLineRunner {
@@ -21,10 +21,6 @@ public class BootStrapData implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        System.out.println("start111");
-
-        System.out.println();
-
         Author author= new Author("ahmed", "gharib");
         Book  book = new Book("book", "123");
         author.getBook().add(book);
