@@ -2,6 +2,7 @@ package guru.springframework.spring5webapp.bootstrap;
 
 import guru.springframework.spring5webapp.domain.Author;
 import guru.springframework.spring5webapp.domain.Book;
+import guru.springframework.spring5webapp.domain.Publisher;
 import guru.springframework.spring5webapp.repositories.AuthorRepository;
 import guru.springframework.spring5webapp.repositories.BookRepository;
 import org.springframework.boot.CommandLineRunner;
@@ -39,6 +40,9 @@ public class BootStrapData implements CommandLineRunner {
 
         authorRepository.save(rod);
         bookRepository.save(noEJB);
+
+        Publisher publisher= new Publisher("ahmed","line","city","state","zip");
+        System.out.println(publisher.toString());
 
         System.out.println("Started in Bootstrap");
         System.out.println("Number of Books: " + bookRepository.count());
